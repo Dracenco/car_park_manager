@@ -1,0 +1,20 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <p style="border-bottom: 1px solid black; padding: 5px">
+    First Name : {{ employee.firstName }}
+    {{ "<br>" }}
+    Last Name: {{ employee.lastName }}
+    {{ "<br>" }}
+    Phone Number: {{ employee.phoneNumber }}
+    {{ "<br>" }}
+    Email address: {{ employee.email }}
+    {{ "<br>" }}
+    Kilometers Limit : {{ employee.kmLimit }}
+    {{ "<br>" }}
+    <a href="{{path("viewallemployees",{id:employee.id})}}">Back</a>
+    {{ "<br>" }}
+    </p>
+{% endblock %}

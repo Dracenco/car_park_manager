@@ -1,0 +1,11 @@
+
+{% extends "base.html.twig" %}
+{% block body %}
+    <p style="border-bottom: 1px solid black; padding: 5px">
+    Employee information updated successfully
+    {{ "<br>" }}
+
+    <a href="{{path("viewallemployees")}}">Back</a>
+    {{ "<br>" }}
+    </p>
+{% endblock %}

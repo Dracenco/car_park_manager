@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block title %}AppBundle:Car:viewCar{% endblock %}
+
+{% block body %}
+    <p style="border-bottom: 1px solid black; padding: 5px">
+
+    {{ "<br>" }}
+    Car make: {{ car.make }}
+    {{ "<br>" }}
+    Car Model: {{ car.model }}
+    {{ "<br>" }}
+    Fabrication Year: {{ car.year }}
+    {{ "<br>" }}
+    Consumption: {{ car.consumption }}
+    {{ "<br>" }}
+    Number of Kilometers on board : {{ car.km }}
+    {{ "<br>" }}
+    Date of last Technical Inspection: {{ car.lasttechinspection|date("m/d/Y") }}
+    {{ "<br>" }}
+    Cost of Technical Inspection: {{ car.pricetechinspection }}
+    {{ "<br>" }}
+        <a href="{{path("viewallcars",{id:car.id})}}">Back</a>
+    {{ "<br>" }}
+    </p>
+{% endblock %}

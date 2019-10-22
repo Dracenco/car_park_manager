@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+
+{% block title %}AppBundle:Employee:viewAllEmployees{% endblock %}
+
+{% block body %}
+    <div>
+    {% for employee in employees %}
+        <p style="border-bottom: 1px solid black; padding: 5px">
+        First Name : {{ employee.firstName }}
+        {{ "<br>" }}
+        Last Name: {{ employee.lastName }}
+        {{ "<br>" }}
+        {{ "<br>" }}
+
+        <a href="{{path("viewemployee",{id:employee.id})}}">View Employee Information</a> |
+
+        <a href="{{path("updateemployee",{id:employee.id})}}">Update</a> |
+
+        <a href="{{path("deleteemployee",{id:employee.id})}}"> Delete</a>
+        {{ "<br>" }}
+        </p>
+    {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %}AppBundle:Car:viewAllCars{% endblock %}
+{% block body %}
+<div>
+{% for car in cars %}
+        <p style="border-bottom: 1px solid black; padding: 5px">
+        Car make: {{ car.make }}
+        {{ "<br>" }}
+        Car Model: {{ car.model }}
+        {{ "<br>" }}
+
+        {{ "<br>" }}
+        <a href="{{path("viewcar",{id:car.id})}}">View Car Information</a> |
+
+        <a href="{{path("updatecar",{id:car.id})}}">Update</a> |
+
+        <a href="{{path("deletecar",{id:car.id})}}"> Delete</a>
+        {{ "<br>" }}
+        <p>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "base.html.twig" %}
+
+
+
+{% block body %}
+    {% for car in cars %}
+<a href="{{path("updatecar",{id:car.id})}}">car.id</a>
+    {% endfor %}
+{% endblock %}
