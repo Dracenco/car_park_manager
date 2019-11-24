@@ -51,4 +51,22 @@ class CostController extends Controller
 
 		return $this->render("@App/Cost/import_fuel_cost.html.twig");
 	}
+	/**
+	 * @Route("/viewAllCosts")
+	 */
+	public function viewAllCosts(){
+		$em = $this->getDoctrine()->getManager();
+		$cost = $em->getRepository(Costs::class)->findAll();
+		return $this->render("@App/Cost/viewAllCosts.twig", array("costs"=>$cost));
+	}
+
+	/**
+	 * @Route("/viewNewCosts")
+	 */
+	public function viewNewCosts(){
+		$em = $this->getDoctrine()->getManager();
+		$cost = $em->getRepository(Costs::class)->findByStatus("new");
+		return $this->render("@App/Cost/viewPaidCosts.twig", array("costs"=>$cost));
+	}
+
 }

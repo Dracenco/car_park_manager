@@ -46,5 +46,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="ActionGame" />
+    <orderEntry type="module" module-name="Monday_week6" />
+    <orderEntry type="module" module-name="Workshop" />
+    <orderEntry type="module" module-name="project_views" />
   </component>
 </module>

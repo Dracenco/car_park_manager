@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{% block title %}AppBundle:Car:viewAllCars{% endblock %}
+{% block body %}
+    <div>
+        {% for cost in costs %}
+        <p style="border-bottom: 1px solid black; padding: 5px">
+            Cost ID: {{ cost.id }}
+            {{ "<br>" }}
+            Total Fuel price: {{ cost.fuelCosts }}
+            {{ "<br>" }}
+            Tech Inspection price: {{ cost.techInspectionCosts }}
+            {{ "<br>" }}
+            Cost Status: {{ cost.status }}
+            {{ "<br>" }}
+        <p>
+            {% endfor %}
+    </div>
+{% endblock %}
